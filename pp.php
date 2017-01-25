@@ -4,7 +4,7 @@
 
 require_once 'lib/Braintree.php';
 $gateway = new Braintree_Gateway(array(
-    'accessToken' => 'access_token$sandbox$5hd3g65q5cq6xrck$168ceadab863c5058b1f74c6863a0902',
+    'accessToken' => 'access_token$sandbox$sypyzs38xxxgm9pq$25a89b8fab203be7ae5cec73b05a8ed2',
 ));
 $clientToken = $gateway->clientToken()->generate();
 
