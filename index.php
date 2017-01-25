@@ -12,7 +12,7 @@ echo $clientToken;
 ?>
 
 <html>
-<form id="checkoutfm" action="server.php" method="post">     
+<form id="checkout" action="server.php" method="post">     
      <h1>EC V.Zero</h1>
      <input type="hidden" name="payment_method_nonce" id="payment_method_nonce" value="" />
 
@@ -65,7 +65,7 @@ braintree.client.create({
         // Tokenization complete
 
          document.getElementById('payment_method_nonce').value = tokenizationPayload.nonce;
-        document.getElementById('checkoutfm').submit();
+        document.getElementById('checkout').submit();
       });
     });
   });
