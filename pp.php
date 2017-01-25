@@ -4,7 +4,7 @@
 
 require_once 'lib/Braintree.php';
 $gateway = new Braintree_Gateway(array(
-    'accessToken' => 'access_token$sandbox$sypyzs38xxxgm9pq$25a89b8fab203be7ae5cec73b05a8ed2',
+    'accessToken' => 'access_token$sandbox$5hd3g65q5cq6xrck$168ceadab863c5058b1f74c6863a0902',
 ));
 $clientToken = $gateway->clientToken()->generate();
 
@@ -12,7 +12,7 @@ echo $clientToken;
 ?>
 
 <html>
-<form id="checkout" action="server.php" method="post">     
+<form id="checkout" action="PPtransaction.php" method="post">			
      <h1>EC V.Zero</h1>
      <input type="hidden" name="payment_method_nonce" id="payment_method_nonce" value="" />
 
@@ -48,18 +48,19 @@ braintree.client.create({
         flow: 'checkout', // Required
         intent: 'sale'
         amount: 10.00, // Required
-        currency: 'SGD', // Required
+        currency: 'USD', // Required
         locale: 'en_US',
         enableShippingAddress: true,
         shippingAddressEditable: false,
         shippingAddressOverride: {
-          recipientName: 'Buyer One',
-          line1: '1, Palm Road',
-          line2: 'Unit 04-03',
-          city: 'Singapore',
-          countryCode: 'SG',
-          postalCode: '457448',
-          phone: '6598127355'
+          recipientName: 'Scruff McGruff',
+          line1: '1234 Main St.',
+          line2: 'Unit 1',
+          city: 'Chicago',
+          countryCode: 'US',
+          postalCode: '60652',
+          state: 'IL',
+          phone: '123.456.7890'
         }
       }, function (err, tokenizationPayload) {
         // Tokenization complete

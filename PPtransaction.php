@@ -5,7 +5,7 @@ session_start();
 
 
 $gateway = new Braintree_Gateway(array(
-    'accessToken' => 'access_token$sandbox$sypyzs38xxxgm9pq$25a89b8fab203be7ae5cec73b05a8ed2',
+    'accessToken' => 'access_token$sandbox$5hd3g65q5cq6xrck$168ceadab863c5058b1f74c6863a0902',
 ));
 
 
@@ -17,14 +17,15 @@ $result = $gateway->transaction()->sale([
       "name" => "www*fgtttteee"
     ],
      "shipping" => [
-      "firstName" => "Buyer",
-      "lastName" => "One",
+      "firstName" => "Jen",
+      "lastName" => "Smith",
       "company" => "Braintree",
       "streetAddress" => "1 E 1st St",
       "extendedAddress" => "Suite 403",
-      "locality" => "Singapore",      
-      "postalCode" => "457448",
-      "countryCodeAlpha2" => "SG"
+      "locality" => "Bartlett",
+      "region" => "IL",
+      "postalCode" => "60103",
+      "countryCodeAlpha2" => "US"
     ],
     "options" => [
       "paypal" => [
@@ -37,9 +38,7 @@ $result = $gateway->transaction()->sale([
 
 if ($result->success) {
     var_dump("Success ID: " . $result);
-    print_r("Success ID: " . $result->transaction->id);
 } else {
-    print_r("Error Message: " . $result->message);
     foreach($result->errors->deepAll() AS $error) {
         var_dump($error->code . ": " . $error->message . "\n");
     }
