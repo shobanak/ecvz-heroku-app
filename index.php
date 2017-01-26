@@ -12,7 +12,7 @@ echo $clientToken;
 ?>
 
 <html>
-<form id="checkout" action="PPtransaction.php" method="post">			
+<form id="checkout" action="server.php" method="post">     
      <h1>EC V.Zero</h1>
      <input type="hidden" name="payment_method_nonce" id="payment_method_nonce" value="" />
 
@@ -48,19 +48,18 @@ braintree.client.create({
         flow: 'checkout', // Required
         intent: 'sale'
         amount: 10.00, // Required
-        currency: 'USD', // Required
+        currency: 'SGD', // Required
         locale: 'en_US',
         enableShippingAddress: true,
         shippingAddressEditable: false,
         shippingAddressOverride: {
-          recipientName: 'Scruff McGruff',
-          line1: '1234 Main St.',
-          line2: 'Unit 1',
-          city: 'Chicago',
-          countryCode: 'US',
-          postalCode: '60652',
-          state: 'IL',
-          phone: '123.456.7890'
+          recipientName: 'Buyer One',
+          line1: '1, Palm Road',
+          line2: 'Unit 04-03',
+          city: 'Singapore',
+          countryCode: 'SG',
+          postalCode: '457448',
+          phone: '6598127355'
         }
       }, function (err, tokenizationPayload) {
         // Tokenization complete

@@ -17,15 +17,14 @@ $result = $gateway->transaction()->sale([
       "name" => "www*fgtttteee"
     ],
      "shipping" => [
-      "firstName" => "Jen",
-      "lastName" => "Smith",
+      "firstName" => "Buyer",
+      "lastName" => "One",
       "company" => "Braintree",
       "streetAddress" => "1 E 1st St",
       "extendedAddress" => "Suite 403",
-      "locality" => "Bartlett",
-      "region" => "IL",
-      "postalCode" => "60103",
-      "countryCodeAlpha2" => "US"
+      "locality" => "Singapore",      
+      "postalCode" => "457448",
+      "countryCodeAlpha2" => "SG"
     ],
     "options" => [
       "paypal" => [
@@ -38,7 +37,9 @@ $result = $gateway->transaction()->sale([
 
 if ($result->success) {
     var_dump("Success ID: " . $result);
+    print_r("Success ID: " . $result->transaction->id);
 } else {
+    print_r("Error Message: " . $result->message);
     foreach($result->errors->deepAll() AS $error) {
         var_dump($error->code . ": " . $error->message . "\n");
     }
