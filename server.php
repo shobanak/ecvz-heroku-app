@@ -13,9 +13,9 @@ $result = $gateway->transaction()->sale([
     "amount" => '10',
     //'merchantAccountId' => 'USD',
     "paymentMethodNonce" => $_POST['payment_method_nonce'],
-    "descriptor" => [
-      "name" => "PP*Merchant"
-    ],
+    //"descriptor" => [
+     // "name" => "PP*Merchant"
+    //],
      "shipping" => [
       "firstName" => "Buyer",
       "lastName" => "One",     
