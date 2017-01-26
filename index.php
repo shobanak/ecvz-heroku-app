@@ -1,22 +1,22 @@
 
-
 <?php
 
 require_once 'lib/Braintree.php';
+
 $gateway = new Braintree_Gateway(array(
     'accessToken' => 'access_token$sandbox$sypyzs38xxxgm9pq$25a89b8fab203be7ae5cec73b05a8ed2',
 ));
+
+
 $clientToken = $gateway->clientToken()->generate();
 
-echo $clientToken;
 ?>
 
 <html>
-<form id="checkout" action="server.php" method="post">     
+<form id="checkoutfrm" action="server.php" method="post">     
      <h1>EC V.Zero</h1>
      <input type="hidden" name="payment_method_nonce" id="payment_method_nonce" value="" />
-
-    </form>
+ </form>
 
 <script src="https://js.braintreegateway.com/web/3.6.3/js/client.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.6.3/js/paypal.min.js"></script>
@@ -62,10 +62,10 @@ braintree.client.create({
           phone: '6598127355'
         }
       }, function (err, tokenizationPayload) {
+        
         // Tokenization complete
-
-         document.getElementById('payment_method_nonce').value = tokenizationPayload.nonce;
-        document.getElementById('checkout').submit();
+        document.getElementById('payment_method_nonce').value = tokenizationPayload.nonce;
+        document.getElementById('checkoutfrm').submit();
       });
     });
   });

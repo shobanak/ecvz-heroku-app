@@ -10,26 +10,26 @@ $gateway = new Braintree_Gateway(array(
 
 
 $result = $gateway->transaction()->sale([
-    "amount" => '19',
-    'merchantAccountId' => 'USD',
+    "amount" => '10',
+    //'merchantAccountId' => 'USD',
     "paymentMethodNonce" => $_POST['payment_method_nonce'],
     "descriptor" => [
-      "name" => "www*fgtttteee"
+      "name" => "PayPalMerchant*shopping"
     ],
      "shipping" => [
       "firstName" => "Buyer",
       "lastName" => "One",
       "company" => "Braintree",
-      "streetAddress" => "1 E 1st St",
-      "extendedAddress" => "Suite 403",
+      "streetAddress" => "1, Palm Road",
+      "extendedAddress" => "Unit 04-03",
       "locality" => "Singapore",      
       "postalCode" => "457448",
       "countryCodeAlpha2" => "SG"
     ],
     "options" => [
       "paypal" => [
-        "customField" => '123',
-        "description" => '345777777'
+        "customField" => 'Item number AXU128903',
+        "description" => 'Pair of trousers'
       ],
     ]
 ]);
