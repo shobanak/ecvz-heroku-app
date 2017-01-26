@@ -47,7 +47,7 @@ braintree.client.create({
       paypalInstance.tokenize({
         flow: 'checkout', // Required
         intent: 'sale'
-        amount: 10.00, // Required
+        amount: '10.00', // Required
         currency: 'SGD', // Required
         locale: 'en_US',
         enableShippingAddress: true,
