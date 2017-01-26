@@ -14,12 +14,11 @@ $result = $gateway->transaction()->sale([
     //'merchantAccountId' => 'USD',
     "paymentMethodNonce" => $_POST['payment_method_nonce'],
     "descriptor" => [
-      "name" => "PayPalMerchant*shopping"
+      "name" => "PayPal*Merchant"
     ],
      "shipping" => [
       "firstName" => "Buyer",
-      "lastName" => "One",
-      "company" => "Braintree",
+      "lastName" => "One",     
       "streetAddress" => "1, Palm Road",
       "extendedAddress" => "Unit 04-03",
       "locality" => "Singapore",      
