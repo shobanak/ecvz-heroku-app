@@ -11,7 +11,7 @@ $gateway = new Braintree_Gateway(array(
 
 $result = $gateway->transaction()->sale([
     // "amount" => '10',
-    "amount" => $_POST['txnamount']
+    "amount" => $_POST['txnamount'],
     //'merchantAccountId' => 'USD',
     "paymentMethodNonce" => $_POST['payment_method_nonce'],
     //"descriptor" => [
