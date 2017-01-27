@@ -35,11 +35,9 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
-    var_dump("Success ID: " . $result);
-    print_r("Success ID: " . $result->transaction->id);
-    print_r($result);
-    echo json_encode($result->transaction->paypal); 
-    print_r("PayPal Transaction ID: " . $result->transaction->paypal);
+    var_dump("This is var dump: " . $result);
+    echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
+    echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>';     
 } else {
     print_r("Error Message: " . $result->message);
     foreach($result->errors->deepAll() AS $error) {
