@@ -16,8 +16,8 @@ $clientToken = $gateway->clientToken()->generate();
 <form id="checkoutfrm" action="server.php" method="post">     
      <h1>EC V.Zero Simple Demonstration</h1>
      <input type="hidden" name="payment_method_nonce" id="payment_method_nonce" value="" />
-     Transaction Amount: <input type="text" name="txnamount" value="10.00"><br>
-     Transaction Currency: <input type="text" name="TxnCur" value="SGD" readonly><br>
+     Transaction Amount: <input type="text" name="txnamount" id="txnamount" value="10.00"><br>
+     Transaction Currency: <input type="text" name="txncur" id="txncur" value="SGD" readonly><br>
  </form>
 
 <script src="https://js.braintreegateway.com/web/3.6.3/js/client.min.js"></script>
