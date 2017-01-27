@@ -37,6 +37,8 @@ $result = $gateway->transaction()->sale([
 if ($result->success) {
     var_dump("Success ID: " . $result);
     print_r("Success ID: " . $result->transaction->id);
+    print_r($result);
+    echo json_encode($result->transaction->paypal); 
     print_r("PayPal Transaction ID: " . $result->transaction->paypal);
 } else {
     print_r("Error Message: " . $result->message);
