@@ -37,7 +37,7 @@ $result = $gateway->transaction()->sale([
 if ($result->success) {
     var_dump("Success ID: " . $result);
     print_r("Success ID: " . $result->transaction->id);
-    var_dump("PayPal Transaction ID: " . $result->transaction->paypal);
+    print_r("PayPal Transaction ID: " . $result->transaction->paypal);
 } else {
     print_r("Error Message: " . $result->message);
     foreach($result->errors->deepAll() AS $error) {
