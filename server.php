@@ -28,8 +28,8 @@ $result = $gateway->transaction()->sale([
     ],
     "options" => [
       "paypal" => [
-        "customField" => 'Item number AXU128903',
-        "description" => 'Pair of trousers'
+        "customField" => $_POST['orderid'],
+        "description" => $_POST['orderdesc']
       ],
     ]
 ]);
