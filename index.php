@@ -14,8 +14,10 @@ $clientToken = $gateway->clientToken()->generate();
 
 <html>
 <form id="checkoutfrm" action="server.php" method="post">     
-     <h1>EC V.Zero</h1>
+     <h1>EC V.Zero Simple Demonstration</h1>
      <input type="hidden" name="payment_method_nonce" id="payment_method_nonce" value="" />
+     Transaction Amount: <input type="text" name="txnamount" value="10.00"><br>
+     Transaction Currency: <input type="text" name="TxnCur" value="SGD" readonly><br>
  </form>
 
 <script src="https://js.braintreegateway.com/web/3.6.3/js/client.min.js"></script>
@@ -47,7 +49,8 @@ braintree.client.create({
       paypalInstance.tokenize({
         flow: 'checkout', // Required
         intent: 'sale',
-        amount: 10.00, // Required
+       // amount: 10.00, // Required
+        amount: document.getElementById('txnamount').value,
         currency: 'SGD', // Required
         locale: 'en_US',
         enableShippingAddress: true,
