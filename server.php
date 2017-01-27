@@ -20,11 +20,11 @@ $result = $gateway->transaction()->sale([
      "shipping" => [
       "firstName" => "Buyer",
       "lastName" => "One",     
-      "streetAddress" => "1, Palm Road",
-      "extendedAddress" => "Unit 04-03",
-      "locality" => "Singapore",      
-      "postalCode" => "457448",
-      "countryCodeAlpha2" => "SG"
+      "streetAddress" => $_POST['addline1'],
+      "extendedAddress" => $_POST['addline2'],
+      "locality" => $_POST['addcity'],      
+      "postalCode" => $_POST['postalcode'],
+      "countryCodeAlpha2" => $_POST['countrycode']
     ],
     "options" => [
       "paypal" => [
