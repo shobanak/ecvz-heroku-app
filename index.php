@@ -76,6 +76,7 @@ braintree.client.create({
           city: document.getElementById('addcity').value,
           countryCode: document.getElementById('countrycode').value,
           postalCode: document.getElementById('postalcode').value,
+          state: document.getElementById('state').value,
           phone: document.getElementById('phone').value
         }
       }, function (err, tokenizationPayload) {
