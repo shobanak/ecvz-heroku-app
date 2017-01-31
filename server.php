@@ -34,11 +34,11 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
-    var_dump("This is var dump: " . $result);
-    echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
-   echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
+  //  var_dump("This is var dump: " . $result);
+  // echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
+  // echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
   print "<pre>";
-  print_r("PayPal Transaction ID: " $result->transaction->paypal->paymentId);
+  echo json_encode($result->transaction->paypal->captureId);
   print "</pre>";
     foreach($result->errors->deepAll() AS $error) {
         var_dump($error->code . ": " . $error->message . "\n");
