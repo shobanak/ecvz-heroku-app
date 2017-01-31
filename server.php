@@ -13,16 +13,14 @@ $result = $gateway->transaction()->sale([
     // "amount" => '10',
     "amount" => $_POST['txnamount'],
     //'merchantAccountId' => 'USD',
-    "paymentMethodNonce" => $_POST['payment_method_nonce'],
-    //"descriptor" => [
-     // "name" => "PP*Merchant"
-    //],
+    "paymentMethodNonce" => $_POST['payment_method_nonce'],    
      "shipping" => [
       "firstName" => "Buyer",
       "lastName" => "One",     
       "streetAddress" => $_POST['addline1'],
       "extendedAddress" => $_POST['addline2'],
-      "locality" => $_POST['addcity'],      
+      "locality" => $_POST['addcity'],
+       "region" => $_POST['state'],   
       "postalCode" => $_POST['postalcode'],
       "countryCodeAlpha2" => $_POST['countrycode']
     ],
