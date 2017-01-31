@@ -69,15 +69,15 @@ braintree.client.create({
         locale: 'en_US',
         enableShippingAddress: true,
         shippingAddressEditable: false,
-        shippingAddressOverride: {
-          recipientName: 'Buyer One',
-          line1: document.getElementById('addline1').value,
-          line2: document.getElementById('addline2').value,
-          city: document.getElementById('addcity').value,
-          countryCode: document.getElementById('countrycode').value,
-          postalCode: document.getElementById('postalcode').value,
-          state: document.getElementById('state').value,
-          phone: document.getElementById('phone').value
+       shippingAddressOverride: {
+          recipientName: 'Scruff McGruff',
+          line1: '1234 Main St.',
+          line2: 'Unit 1',
+          city: 'Chicago',
+          countryCode: 'US',
+          postalCode: '60652',
+          state: 'IL',
+          phone: '123.456.7890'
         }
       }, function (err, tokenizationPayload) {
         
