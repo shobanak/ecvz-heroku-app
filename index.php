@@ -24,13 +24,13 @@ $clientToken = $gateway->clientToken()->generate();
      Order Description: <input type="text" name="orderdesc" id="orderdesc" value="pair of socks"><br><br>
      <h4>Shipping Details</h4>
     <p>This address overrides the addresses available in your PayPal wallet</p>
-     Line 1: <input type="text" name="addline1" id="addline1" value="1, Palm Road"><br>
-     Line 2: <input type="text" name="addline2" id="addline2" value="Unit 04-03"><br>
-     City: <input type="text" name="addcity" id="addcity" value="Singapore"><br>
-     Country Code: <input type="text" name="countrycode" id="countrycode" value="SG"><br>
-     State : <input type="text" name="state" id="state" value="SG"><br>
-     Postal Code: <input type="text" name="postalcode" id="postalcode" value="457448"><br>
-     Phone No: <input type="text" name="phone" id="phone" value="6598127355"><br><br>
+     Line 1: <input type="text" name="addline1" id="addline1" value="1, Palm Road" readonly><br>
+     Line 2: <input type="text" name="addline2" id="addline2" value="Unit 04-03" readonly><br>
+     City: <input type="text" name="addcity" id="addcity" value="Singapore" readonly><br>
+     Country Code: <input type="text" name="countrycode" id="countrycode" value="SG" readonly><br>
+     State : <input type="text" name="state" id="state" value="SG" readonly><br>
+     Postal Code: <input type="text" name="postalcode" id="postalcode" value="457448" readonly><br>
+     Phone No: <input type="text" name="phone" id="phone" value="6598127355" readonly><br><br>
 
  </form>
 
