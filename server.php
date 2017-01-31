@@ -38,7 +38,7 @@ if ($result->success) {
     echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
    echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
   print "<pre>";
-  print_r("PayPal Transaction ID: " . $result->transaction->paypal->captureId . "\n");
+  print_r("PayPal Transaction ID: " . $result->transaction->paypal->captureId );
   print "</pre>";
     foreach($result->errors->deepAll() AS $error) {
         var_dump($error->code . ": " . $error->message . "\n");
