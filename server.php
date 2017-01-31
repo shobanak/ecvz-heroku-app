@@ -38,11 +38,19 @@ if ($result->success) {
   // echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
   // echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
   print "<pre>";
-  echo json_encode($result->transaction->paypal);
+  echo json_encode($result->transaction);
   print "</pre>";
-    foreach($result->errors->deepAll() AS $error) {
-        var_dump($error->code . ": " . $error->message . "\n");
-    }
+
+  $decoded_array = json_decode($result, true);
+  echo $decoded_array['transaction']['paypal']['captureId'];
+
+
+
+
+
+  foreach($result->errors->deepAll() AS $error) {
+    var_dump($error->code . ": " . $error->message . "\n");
+  }
 
 } else {
     print_r("Error Message: " . $result->message);
