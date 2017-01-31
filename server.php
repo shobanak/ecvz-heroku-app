@@ -44,8 +44,8 @@ if ($result->success) {
  
   */
 
-  echo json_encode($result);
-  //echo json_encode($result->transaction->paypal);
+  echo $result ;
+  echo json_encode($result->transaction->paypal);
 
 
   foreach($result->errors->deepAll() AS $error) {
