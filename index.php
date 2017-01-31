@@ -27,8 +27,9 @@ $clientToken = $gateway->clientToken()->generate();
      Line 1: <input type="text" name="addline1" id="addline1" value="1, Palm Road"><br>
      Line 2: <input type="text" name="addline2" id="addline2" value="Unit 04-03"><br>
      City: <input type="text" name="addcity" id="addcity" value="Singapore"><br>
-     Country Code: <input type="text" name="countrycode" id="countrycode" value="SG"><br><br>
-     Postal Code: <input type="text" name="postalcode" id="postalcode" value="457448"><br><br>
+     Country Code: <input type="text" name="countrycode" id="countrycode" value="SG"><br>
+     State : <input type="text" name="state" id="state" value="SG"><br>
+     Postal Code: <input type="text" name="postalcode" id="postalcode" value="457448"><br>
      Phone No: <input type="text" name="phone" id="phone" value="6598127355"><br><br>
 
  </form>
