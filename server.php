@@ -38,7 +38,7 @@ if ($result->success) {
   // echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
   // echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
   print "<pre>";
-  echo json_encode($result->transaction);
+  echo json_encode($result->paypalDetails);
   print "</pre>";
 
   $decoded_array = json_decode($result, true);
