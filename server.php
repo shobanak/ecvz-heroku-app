@@ -35,8 +35,10 @@ $result = $gateway->transaction()->sale([
 
 if ($result->success) {
 
+  var_dump("This is var dump of result->transaction->paypal : " . $result->transaction->paypal);
+  var_dump("This is var dump of result->transaction->paypal->captureId : " . $result->transaction->paypal->captureId);
   /*
-  var_dump("This is var dump: " . $result);
+  var_dump("This is var dump: " . $result->transaction->paypal);
   echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
   echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
   print "<pre>";
@@ -44,8 +46,8 @@ if ($result->success) {
  
   */
 
-  echo $result ;
-  //echo json_encode($result->transaction->paypal);
+  //echo $result ;
+  echo json_encode($result->transaction->paypal);
 
 
   foreach($result->errors->deepAll() AS $error) {
