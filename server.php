@@ -37,6 +37,7 @@ if ($result->success) {
 
   var_dump("This is var dump of result->transaction->paypal : " . $result->transaction->paypal);
   var_dump("This is var dump of result->transaction->paypal->captureId : " . $result->transaction->paypal->captureId);
+  echo '<pre>'; print_r("This is print_r: " . $result->transaction->paypal[captureId]); echo '</pre>';   
   /*
   var_dump("This is var dump: " . $result->transaction->paypal);
   echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
