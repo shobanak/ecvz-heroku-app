@@ -34,26 +34,12 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
-
-  var_dump("This is var dump of result->transaction->paypal : " . $result->transaction->paypal);
-  var_dump("This is var dump of result->transaction->paypal->captureId : " . $result->transaction->paypal->captureId);
-  echo '<pre>'; print_r("This is print_r: " . $result->transaction->paypal[captureId]); echo '</pre>';   
-  /*
-  var_dump("This is var dump: " . $result->transaction->paypal);
-  echo '<pre>'; print_r("This is print_r: " . $result); echo '</pre>';   
-  echo '<pre>'; echo json_encode($result->transaction->paypal); echo '</pre>'; 
-  print "<pre>";
-  print "</pre>";
+var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
+var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
+var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
+var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
  
-  */
-
-  //echo $result ;
-  echo json_encode($result->transaction->paypal);
-
-
-  foreach($result->errors->deepAll() AS $error) {
-    var_dump($error->code . ": " . $error->message . "\n");
-  }
+ 
 
 } else {
     print_r("Error Message: " . $result->message);
