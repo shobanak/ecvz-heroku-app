@@ -33,7 +33,7 @@ $result = $gateway->transaction()->sale([
 ]);
 
 <html>
-<h1>Express Checkout - v.zero SDK(ECVZ) Transaction Result Object </h1><br>  
+<h1>Express Checkout - v.zero SDK(ECVZ) Transaction Result </h1><br>  
      <p>Here are  the details of the PayPal Transaction  </p>  
 </html>
 
