@@ -34,8 +34,8 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
+print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId] . "\n");  
 print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  
-print_r("\n" . "PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  
 
 } else {
     print_r("Error Message: " . $result->message);
