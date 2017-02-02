@@ -32,13 +32,9 @@ $result = $gateway->transaction()->sale([
     ]
 ]);
 
-<html>
-<h1>Express Checkout - v.zero SDK(ECVZ) Transaction Result </h1><br>  
-     <p>Here are  the details of the PayPal Transaction  </p>  
-</html>
 
 if ($result->success) {
-echo 'Here are  the details of the PayPal Transaction <br/>';
+echo 'Express Checkout - v.zero SDK(ECVZ) Transaction Result Object <br/> <br/> <br/>';
 print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  echo '<br/>';
 print_r(json_encode($result->transaction->paypal));  echo '<br/>'; 
 
@@ -49,5 +45,6 @@ print_r(json_encode($result->transaction->paypal));  echo '<br/>';
     }
 }
 
-?> 
+?>
+
 
