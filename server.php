@@ -34,13 +34,12 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
+print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);
+/*  
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
-var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
- 
- 
-
+var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n"); */
 } else {
     print_r("Error Message: " . $result->message);
     foreach($result->errors->deepAll() AS $error) {
