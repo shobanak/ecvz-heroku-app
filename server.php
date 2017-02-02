@@ -34,10 +34,10 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
-print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  
-echo 'Will print a newline<br/>';
-print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  
-echo 'Will print a newline<br/>';
+echo 'Here are  the details of the PayPal Transaction <br/>';
+print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  echo '<br/>';
+print_r("PayPal transaction ID is :" . $result->transaction->paypal);  echo '<br/>'; 
+
 } else {
     print_r("Error Message: " . $result->message);
     foreach($result->errors->deepAll() AS $error) {
