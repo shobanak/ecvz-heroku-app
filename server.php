@@ -34,9 +34,9 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
-print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);
-/*  
+print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
+/*  
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n");
 var_dump( " PayPal Transaction Id is : " . ($result->transaction->paypal[captureId] . "\n"); */
