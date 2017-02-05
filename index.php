@@ -62,9 +62,8 @@ braintree.client.create({
       // Tokenize here!
       paypalInstance.tokenize({
         flow: 'checkout', // Required
-        intent: 'sale',
-       // amount: 10.00, // Required
-        amount: document.getElementById('txnamount').value,
+        intent: 'sale',       
+        amount: document.getElementById('txnamount').value, // Required
         currency: 'SGD', // Required
         locale: 'en_US',
         enableShippingAddress: true,
