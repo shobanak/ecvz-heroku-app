@@ -34,8 +34,18 @@ $result = $gateway->transaction()->sale([
 
 
 if ($result->success) {
-echo 'Express Checkout - v.zero SDK(ECVZ) Transaction Result Object <br/> <br/> <br/>';
+echo 'Express Checkout - v.zero SDK(ECVZ) Transaction Result Details <br/> <br/> <br/>';
 print_r("PayPal transaction ID is :" . $result->transaction->paypal[captureId]);  echo '<br/>';
+print_r("PayPal DebugID required for troubleshooting :" . $result->transaction->paypal[debugId]);  echo '<br/>';
+print_r("PayPal transaction Seller Protection Status :" . $result->transaction->paypal[sellerProtectionStatus]);  echo '<br/>';
+print_r("PayPal Custom field is :" . $result->transaction->paypal[customField]);  echo '<br/>';
+print_r("PayPal Payment ID is :" . $result->transaction->paypal[paymentId]);  echo '<br/>';
+echo '<br/><br/><br/>'; echo 'Express Checkout - v.zero SDK(ECVZ) Payer Details <br/> <br/> <br/>';
+print_r("Payer ID is :" . $result->transaction->paypal[payerId]);  echo '<br/>';
+print_r("Payer Email is :" . $result->transaction->paypal[payerEmail]);  echo '<br/>';
+print_r("Payer First Name is :" . $result->transaction->paypal[payerFirstName]);  echo '<br/>';
+print_r("Payer Second Name is :" . $result->transaction->paypal[payerLastName]);  echo '<br/>';
+print_r("Payer Status is :" . $result->transaction->paypal[payerStatus]);  echo '<br/>';
 print_r(json_encode($result->transaction->paypal));  echo '<br/>'; 
 
 } else {
